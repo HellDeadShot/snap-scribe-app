@@ -52,16 +52,19 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// TikTok-inspired custom colors
+				'video-bg': 'hsl(var(--video-bg))',
+				'like-color': 'hsl(var(--like-color))',
+				'like-glow': 'hsl(var(--like-glow))',
+				'nav-bg': 'hsl(var(--nav-bg))',
+				'nav-border': 'hsl(var(--nav-border))',
+				'text-white': 'hsl(var(--text-white))',
+				'text-gray': 'hsl(var(--text-gray))'
+			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-overlay': 'var(--gradient-overlay)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +87,27 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'like-bounce': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.2)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0px)' },
+					'50%': { transform: 'translateY(-10px)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'like-bounce': 'like-bounce 0.3s ease-in-out',
+				'slide-up': 'slide-up 0.4s ease-out',
+				'float': 'float 3s ease-in-out infinite'
 			}
 		}
 	},
